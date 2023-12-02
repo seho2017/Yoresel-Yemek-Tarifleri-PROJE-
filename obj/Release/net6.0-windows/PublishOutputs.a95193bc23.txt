@@ -1,0 +1,22 @@
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MASA_ÜSTÜ YÖRESEL YEMEKLER.exe
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MASA_ÜSTÜ YÖRESEL YEMEKLER.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MASA_ÜSTÜ YÖRESEL YEMEKLER.deps.json
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MASA_ÜSTÜ YÖRESEL YEMEKLER.runtimeconfig.json
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MASA_ÜSTÜ YÖRESEL YEMEKLER.pdb
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\BouncyCastle.Cryptography.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\Google.Protobuf.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\K4os.Compression.LZ4.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\K4os.Compression.LZ4.Streams.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\K4os.Hash.xxHash.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\MySql.Data.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\System.Diagnostics.DiagnosticSource.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\System.IO.Pipelines.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\System.Text.Encodings.Web.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\System.Text.Json.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\ZstdSharp.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\win-x64\native\comerr64.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\win-x64\native\gssapi64.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\win-x64\native\krb5_64.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\win-x64\native\krbcc64.dll
+C:\Users\biris\Desktop\Yöresel Yemek Tarifleri(PROJE)\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
