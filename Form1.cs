@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic.Devices;
 using System.Drawing.Drawing2D;
 
 namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
@@ -53,17 +54,55 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form3 tarif = new Form3();
+            tarif.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Form7 tarif = new Form7();
+            tarif.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            //mouse hareketi icin;
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            //mouse hareket
+            move = false;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            // localasyonla ilgilenecek maouse hareketiyle hareket
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+
         }
     }
 }

@@ -18,7 +18,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             textBox2.MouseEnter += TextBox_MouseEnter;
             textBox2.MouseLeave += TextBox_MouseLeave;
 
-          
+
         }
 
         private void TextBox_MouseEnter(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             }
             else if (oku.Read())
             {
-                Form3 tarif = new Form3();
+                Form6 tarif = new Form6();
                 tarif.Show();
                 this.Hide();
             }
@@ -89,6 +89,33 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             Tarif.Show();
             this.Hide();
 
+        }
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Form2_MouseDown(object sender, MouseEventArgs e)
+        {
+            //mouse hareketi icin;
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+
+        }
+
+        private void Form2_MouseMove(object sender, MouseEventArgs e)
+        {
+            // localasyonla ilgilenecek maouse hareketiyle hareket
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+
+        }
+
+        private void Form2_MouseUp(object sender, MouseEventArgs e)
+        {
+            //mouse hareket
+            move = false;
         }
     }
 }

@@ -42,11 +42,11 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(224, 224, 224);
-            button1.FlatAppearance.MouseOverBackColor = Color.Blue;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.DimGray;
-            button1.Location = new Point(260, 342);
+            button1.Location = new Point(560, 399);
             button1.Name = "button1";
             button1.Size = new Size(138, 47);
             button1.TabIndex = 0;
@@ -59,7 +59,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(200, 271);
+            label1.Location = new Point(500, 328);
             label1.Name = "label1";
             label1.Size = new Size(294, 42);
             label1.TabIndex = 1;
@@ -70,7 +70,7 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(213, 79);
+            pictureBox1.Location = new Point(513, 136);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(220, 165);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -83,7 +83,7 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.FlatAppearance.BorderSize = 3;
-            button2.Location = new Point(591, -2);
+            button2.Location = new Point(1142, 0);
             button2.Name = "button2";
             button2.Size = new Size(51, 41);
             button2.TabIndex = 3;
@@ -111,7 +111,7 @@
             pictureBox2.Dock = DockStyle.Top;
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(643, 43);
+            pictureBox2.Size = new Size(1193, 43);
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
@@ -120,7 +120,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
-            ClientSize = new Size(643, 582);
+            ClientSize = new Size(1193, 595);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
@@ -131,6 +131,9 @@
             Name = "Form5";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tarif Yolla";
+            MouseDown += Form5_MouseDown;
+            MouseMove += Form5_MouseMove;
+            MouseUp += Form5_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

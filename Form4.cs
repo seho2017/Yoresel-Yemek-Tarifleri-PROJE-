@@ -70,11 +70,11 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
             {
-                MessageBox.Show("Alanlar boş geçilemez");
+                MessageBox.Show("Alanlar boş geçilemez", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (textBox2.Text != textBox3.Text)
             {
-                MessageBox.Show("Şifreler uyuşmuyor");
+                MessageBox.Show("Şifreler uyuşmuyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -107,6 +107,37 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             Form2 Tarif = new Form2();
             Tarif.Show();
             this.Hide();
+        }
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Form4_MouseDown(object sender, MouseEventArgs e)
+        {
+            //mouse hareketi icin;
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
+        private void Form4_MouseUp(object sender, MouseEventArgs e)
+        {
+            //mouse hareket
+            move = false;
+        }
+
+        private void Form4_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            // localasyonla ilgilenecek maouse hareketiyle hareket
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

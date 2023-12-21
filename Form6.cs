@@ -59,16 +59,16 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
-            // Fare TextBox'ın üzerine gelince rengi değiştir
+            // Fare TextBox'ın üzerinden çıkınca orijinal rengini geri al
             TextBox textBox = (TextBox)sender;
-            textBox.BackColor = Color.LightBlue;
+            textBox.BackColor = SystemColors.Window;
         }
 
         private void textBox1_MouseLeave(object sender, EventArgs e)
         {
-            // Fare TextBox'ın üzerinden çıkınca orijinal rengini geri al
+            // Fare TextBox'ın üzerine gelince rengi değiştir
             TextBox textBox = (TextBox)sender;
-            textBox.BackColor = SystemColors.Window;
+            textBox.BackColor = Color.LightBlue;
         }
 
         private void textBox2_MouseEnter(object sender, EventArgs e)
@@ -140,5 +140,19 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             TextBox textBox = (TextBox)sender;
             textBox.BackColor = SystemColors.Window;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
+
+
+
+
+
+
+

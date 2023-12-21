@@ -50,5 +50,30 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             anasayfa.Show();
             this.Hide();
         }
+        bool move;
+        int mouse_x;
+        int mouse_y;
+        private void Form5_MouseDown(object sender, MouseEventArgs e)
+        {
+            //mouse hareketi icin;
+            move = true;
+            mouse_x = e.X;
+            mouse_y = e.Y;
+        }
+
+        private void Form5_MouseUp(object sender, MouseEventArgs e)
+        {
+            //mouse hareket
+            move = false;
+        }
+
+        private void Form5_MouseMove(object sender, MouseEventArgs e)
+        {
+            // localasyonla ilgilenecek maouse hareketiyle hareket
+            if (move)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouse_x, MousePosition.Y - mouse_y);
+            }
+        }
     }
 }

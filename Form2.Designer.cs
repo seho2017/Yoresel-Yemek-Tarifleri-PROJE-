@@ -58,7 +58,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(255, 255, 192);
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(174, 134);
+            label1.Location = new Point(454, 141);
             label1.Name = "label1";
             label1.Size = new Size(287, 25);
             label1.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(255, 255, 192);
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(148, 217);
+            label2.Location = new Point(428, 224);
             label2.Name = "label2";
             label2.Size = new Size(74, 21);
             label2.TabIndex = 0;
@@ -80,7 +80,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(255, 255, 192);
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(174, 290);
+            label3.Location = new Point(454, 297);
             label3.Name = "label3";
             label3.Size = new Size(48, 21);
             label3.TabIndex = 0;
@@ -88,17 +88,20 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             // textBox1
             // 
+            textBox1.AcceptsTab = true;
             textBox1.BackColor = Color.FromArgb(255, 255, 192);
-            textBox1.Location = new Point(244, 217);
+            textBox1.Location = new Point(524, 224);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(189, 38);
             textBox1.TabIndex = 1;
+            textBox1.TabIndexChanged += TextBox_MouseEnter;
+            textBox1.Enter += TextBox_MouseLeave;
             // 
             // textBox2
             // 
             textBox2.BackColor = Color.FromArgb(255, 255, 192);
-            textBox2.Location = new Point(244, 288);
+            textBox2.Location = new Point(524, 295);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
@@ -109,10 +112,10 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             button2.BackColor = Color.FromArgb(255, 255, 192);
             button2.FlatAppearance.MouseDownBackColor = Color.White;
-            button2.FlatAppearance.MouseOverBackColor = Color.Blue;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(359, 394);
+            button2.Location = new Point(639, 401);
             button2.Name = "button2";
             button2.Size = new Size(122, 38);
             button2.TabIndex = 4;
@@ -124,10 +127,10 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             button1.BackColor = Color.FromArgb(255, 255, 192);
             button1.FlatAppearance.MouseDownBackColor = Color.White;
-            button1.FlatAppearance.MouseOverBackColor = Color.Blue;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(199, 394);
+            button1.Location = new Point(479, 401);
             button1.Name = "button1";
             button1.Size = new Size(125, 38);
             button1.TabIndex = 5;
@@ -139,7 +142,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             pictureBox1.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(426, 217);
+            pictureBox1.Location = new Point(706, 224);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(55, 38);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -150,7 +153,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             pictureBox2.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(426, 288);
+            pictureBox2.Location = new Point(706, 295);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(55, 38);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -165,7 +168,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button3.FlatAppearance.MouseDownBackColor = Color.White;
             button3.FlatAppearance.MouseOverBackColor = Color.Blue;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(71, 6);
+            button3.Location = new Point(429, 1);
             button3.Name = "button3";
             button3.Size = new Size(51, 43);
             button3.TabIndex = 8;
@@ -181,9 +184,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button4.FlatAppearance.MouseDownBackColor = Color.White;
             button4.FlatAppearance.MouseOverBackColor = Color.Blue;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(169, 7);
+            button4.Location = new Point(503, 0);
             button4.Name = "button4";
-            button4.Size = new Size(52, 42);
+            button4.Size = new Size(52, 47);
             button4.TabIndex = 9;
             button4.Text = " ";
             button4.UseVisualStyleBackColor = false;
@@ -196,7 +199,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button5.FlatAppearance.MouseDownBackColor = Color.White;
             button5.FlatAppearance.MouseOverBackColor = Color.Blue;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(261, 6);
+            button5.Location = new Point(582, 1);
             button5.Name = "button5";
             button5.Size = new Size(52, 42);
             button5.TabIndex = 10;
@@ -211,9 +214,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button6.FlatAppearance.MouseDownBackColor = Color.White;
             button6.FlatAppearance.MouseOverBackColor = Color.Blue;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(346, 7);
+            button6.Location = new Point(664, -2);
             button6.Name = "button6";
-            button6.Size = new Size(52, 42);
+            button6.Size = new Size(52, 49);
             button6.TabIndex = 11;
             button6.Text = " ";
             button6.UseVisualStyleBackColor = false;
@@ -226,9 +229,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button7.FlatAppearance.MouseDownBackColor = Color.White;
             button7.FlatAppearance.MouseOverBackColor = Color.Blue;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(422, 6);
+            button7.Location = new Point(742, -3);
             button7.Name = "button7";
-            button7.Size = new Size(57, 42);
+            button7.Size = new Size(57, 45);
             button7.TabIndex = 12;
             button7.Text = " ";
             button7.UseVisualStyleBackColor = false;
@@ -236,14 +239,13 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // 
             // pictureBox3
             // 
-            pictureBox3.BackColor = Color.FromArgb(192, 0, 0);
+            pictureBox3.BackColor = Color.FromArgb(192, 64, 0);
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Dock = DockStyle.Top;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(608, 54);
+            pictureBox3.Size = new Size(1183, 48);
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
             // 
@@ -255,9 +257,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 64, 0);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button8.FlatStyle = FlatStyle.Flat;
-            button8.Location = new Point(559, 0);
+            button8.Location = new Point(1134, 1);
             button8.Name = "button8";
-            button8.Size = new Size(49, 54);
+            button8.Size = new Size(49, 41);
             button8.TabIndex = 14;
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
@@ -270,9 +272,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
             button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 192, 0);
             button9.FlatStyle = FlatStyle.Flat;
-            button9.Location = new Point(0, 0);
+            button9.Location = new Point(0, -1);
             button9.Name = "button9";
-            button9.Size = new Size(39, 54);
+            button9.Size = new Size(39, 49);
             button9.TabIndex = 15;
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
@@ -283,7 +285,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(608, 577);
+            ClientSize = new Size(1183, 577);
             Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
@@ -305,6 +307,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "GİRİŞ SAYFASI";
+            MouseDown += Form2_MouseDown;
+            MouseMove += Form2_MouseMove;
+            MouseUp += Form2_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
