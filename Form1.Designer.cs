@@ -59,11 +59,11 @@
             button1.FlatAppearance.MouseDownBackColor = Color.White;
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(481, 483);
+            button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.FromArgb(128, 64, 0);
+            button1.Location = new Point(568, 455);
             button1.Name = "button1";
-            button1.Size = new Size(162, 37);
+            button1.Size = new Size(168, 37);
             button1.TabIndex = 0;
             button1.Text = "Tarif Yolla";
             button1.UseVisualStyleBackColor = false;
@@ -77,12 +77,12 @@
             button2.FlatAppearance.MouseDownBackColor = Color.White;
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(481, 207);
+            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.FromArgb(128, 64, 0);
+            button2.Location = new Point(553, 195);
             button2.MaximumSize = new Size(0, 500);
             button2.Name = "button2";
-            button2.Size = new Size(162, 38);
+            button2.Size = new Size(183, 38);
             button2.TabIndex = 1;
             button2.Text = "Ana Sayfa";
             button2.UseVisualStyleBackColor = false;
@@ -96,10 +96,11 @@
             button4.FlatAppearance.MouseDownBackColor = Color.White;
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(481, 345);
+            button4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.FromArgb(128, 64, 0);
+            button4.Location = new Point(568, 333);
             button4.Name = "button4";
-            button4.Size = new Size(162, 35);
+            button4.Size = new Size(168, 35);
             button4.TabIndex = 3;
             button4.Text = "Yemek Tarifleri";
             button4.UseVisualStyleBackColor = false;
@@ -113,11 +114,12 @@
             button5.FlatAppearance.MouseDownBackColor = Color.White;
             button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = SystemColors.ActiveCaptionText;
+            button5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.FromArgb(128, 64, 0);
             button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(481, 407);
+            button5.Location = new Point(553, 395);
             button5.Name = "button5";
-            button5.Size = new Size(162, 37);
+            button5.Size = new Size(183, 37);
             button5.TabIndex = 4;
             button5.Text = "Tarif Defterim";
             button5.UseVisualStyleBackColor = false;
@@ -130,9 +132,11 @@
             button3.FlatAppearance.MouseDownBackColor = Color.White;
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(481, 272);
+            button3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.FromArgb(128, 64, 0);
+            button3.Location = new Point(568, 260);
             button3.Name = "button3";
-            button3.Size = new Size(162, 38);
+            button3.Size = new Size(168, 38);
             button3.TabIndex = 7;
             button3.Text = "Şehirlere Göre Yöresel Yemekler";
             button3.UseVisualStyleBackColor = false;
@@ -141,9 +145,10 @@
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(459, 76);
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(475, 68);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(305, 93);
+            pictureBox2.Size = new Size(277, 93);
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
@@ -151,9 +156,9 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(639, 207);
+            pictureBox1.Location = new Point(499, 195);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(66, 38);
+            pictureBox1.Size = new Size(73, 38);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -162,9 +167,9 @@
             // 
             pictureBox3.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(639, 272);
+            pictureBox3.Location = new Point(499, 260);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(66, 38);
+            pictureBox3.Size = new Size(72, 38);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
@@ -173,9 +178,9 @@
             // 
             pictureBox4.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(639, 345);
+            pictureBox4.Location = new Point(499, 333);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(66, 35);
+            pictureBox4.Size = new Size(72, 35);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 11;
             pictureBox4.TabStop = false;
@@ -184,9 +189,9 @@
             // 
             pictureBox5.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(639, 407);
+            pictureBox5.Location = new Point(499, 395);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(66, 37);
+            pictureBox5.Size = new Size(72, 37);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 12;
             pictureBox5.TabStop = false;
@@ -195,9 +200,9 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(255, 255, 192);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(639, 483);
+            pictureBox6.Location = new Point(500, 455);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(66, 37);
+            pictureBox6.Size = new Size(72, 37);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 13;
             pictureBox6.TabStop = false;

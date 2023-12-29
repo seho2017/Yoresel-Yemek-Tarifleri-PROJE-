@@ -28,5 +28,10 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
         {
             Application.Exit();
         }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

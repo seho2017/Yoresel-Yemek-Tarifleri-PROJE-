@@ -38,3 +38,5 @@ C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL Y
 C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL YEMEKLER\obj\Debug\net6.0-windows\MASA_ÜSTÜ_YÖRESEL_YEMEKLER.Form3.resources
 C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL YEMEKLER\obj\Debug\net6.0-windows\MASA_ÜSTÜ_YÖRESEL_YEMEKLER.Form4.resources
 C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL YEMEKLER\obj\Debug\net6.0-windows\MASA_ÜSTÜ_YÖRESEL_YEMEKLER.Form5.resources
+C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL YEMEKLER\obj\Debug\net6.0-windows\MASA_ÜSTÜ_YÖRESEL_YEMEKLER.Form6.resources
+C:\Users\biris\source\repos\MASA_ÜSTÜ YÖRESEL YEMEKLER\MASA_ÜSTÜ YÖRESEL YEMEKLER\obj\Debug\net6.0-windows\MASA_ÜSTÜ_YÖRESEL_YEMEKLER.Form7.resources

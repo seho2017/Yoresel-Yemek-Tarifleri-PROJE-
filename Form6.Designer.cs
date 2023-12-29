@@ -34,17 +34,13 @@
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
             textBox6 = new TextBox();
             button3 = new Button();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +81,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(255, 128, 0);
-            label1.Location = new Point(1, 52);
+            label1.Location = new Point(1, 146);
             label1.Name = "label1";
             label1.Size = new Size(96, 30);
             label1.TabIndex = 3;
@@ -96,44 +92,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(1, 129);
+            label2.Location = new Point(0, 52);
             label2.Name = "label2";
-            label2.Size = new Size(89, 30);
+            label2.Size = new Size(110, 30);
             label2.TabIndex = 4;
-            label2.Text = "Tarif Adı";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(255, 128, 0);
-            label3.Location = new Point(0, 206);
-            label3.Name = "label3";
-            label3.Size = new Size(167, 30);
-            label3.TabIndex = 5;
-            label3.Text = "Hazırlama Süresi";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(255, 128, 0);
-            label4.Location = new Point(1, 297);
-            label4.Name = "label4";
-            label4.Size = new Size(141, 30);
-            label4.TabIndex = 6;
-            label4.Text = "Pişirme Süresi";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(255, 128, 0);
-            label5.Location = new Point(0, 370);
-            label5.Name = "label5";
-            label5.Size = new Size(121, 30);
-            label5.TabIndex = 7;
-            label5.Text = "Malzemeler";
+            label2.Text = "Yemek Adı";
             // 
             // label6
             // 
@@ -141,11 +104,11 @@
             label6.BackColor = Color.FromArgb(224, 224, 224);
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(255, 128, 0);
-            label6.Location = new Point(1, 450);
+            label6.Location = new Point(3, 310);
             label6.Name = "label6";
-            label6.Size = new Size(108, 30);
+            label6.Size = new Size(94, 30);
             label6.TabIndex = 8;
-            label6.Text = "Hazırlanışı";
+            label6.Text = "Tarifi Yaz";
             // 
             // textBox1
             // 
@@ -157,52 +120,12 @@
             textBox1.MouseEnter += textBox1_MouseEnter;
             textBox1.MouseLeave += textBox1_MouseLeave;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(0, 162);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(1195, 54);
-            textBox2.TabIndex = 10;
-            textBox2.MouseEnter += textBox2_MouseEnter;
-            textBox2.MouseLeave += textBox2_MouseLeave;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(0, 239);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(1195, 55);
-            textBox3.TabIndex = 11;
-            textBox3.MouseEnter += textBox3_MouseEnter;
-            textBox3.MouseLeave += textBox3_MouseLeave;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(0, 330);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(1195, 49);
-            textBox4.TabIndex = 12;
-            textBox4.MouseEnter += textBox4_MouseEnter;
-            textBox4.MouseLeave += textBox4_MouseLeave;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(0, 403);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(1195, 53);
-            textBox5.TabIndex = 13;
-            textBox5.MouseEnter += textBox5_MouseEnter;
-            textBox5.MouseLeave += textBox5_MouseLeave;
-            // 
             // textBox6
             // 
-            textBox6.Location = new Point(0, 483);
+            textBox6.Location = new Point(0, 357);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(1195, 56);
+            textBox6.Size = new Size(1195, 182);
             textBox6.TabIndex = 14;
             textBox6.MouseEnter += textBox6_MouseEnter;
             textBox6.MouseLeave += textBox6_MouseLeave;
@@ -211,7 +134,7 @@
             // 
             button3.BackColor = Color.FromArgb(255, 128, 0);
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
-            button3.Location = new Point(0, 540);
+            button3.Location = new Point(1, 535);
             button3.Name = "button3";
             button3.Size = new Size(1195, 45);
             button3.TabIndex = 15;
@@ -219,23 +142,48 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
+            label3.Location = new Point(1, 236);
+            label3.Name = "label3";
+            label3.Size = new Size(143, 30);
+            label3.TabIndex = 16;
+            label3.Text = "kategori Seçin";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "ANA YEMEKLER", "ÇORBALAR", "TATLILAR", "KAHVALTILIKLAR" });
+            comboBox1.Location = new Point(0, 269);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(1194, 23);
+            comboBox1.TabIndex = 17;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(0, 184);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(1194, 49);
+            textBox2.TabIndex = 18;
+            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1192, 583);
+            Controls.Add(textBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(label3);
             Controls.Add(button3);
             Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button2);
@@ -260,16 +208,12 @@
         private Button button2;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
         private Label label6;
         private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
         private TextBox textBox6;
         private Button button3;
+        private Label label3;
+        private ComboBox comboBox1;
+        private TextBox textBox2;
     }
 }

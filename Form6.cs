@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,15 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 {
     public partial class Form6 : Form
     {
+        private string connectionString = "server='localhost';" + "Database='Yemektarifleri';" + "Uid='root';" + "Pwd='123456';";
         public Form6()
         {
             InitializeComponent();
+
         }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -143,12 +149,54 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Formdaki değerleri al
+            string yemekAdi = textBox1.Text;
+            string sehir = textBox2.Text;
+            string kategori = comboBox1.SelectedItem?.ToString();
+            string tarif = textBox6.Text;
 
+            // Tüm alanların doldurulup doldurulmadığını kontrol et
+            if (string.IsNullOrEmpty(yemekAdi) || string.IsNullOrEmpty(sehir) || string.IsNullOrEmpty(kategori) || string.IsNullOrEmpty(tarif))
+            {
+                MessageBox.Show("Lütfen tüm alanları doldurun.");
+                return;
+            }
+
+            // Yemek tarifini veritabanına ekleyen metot
+            EkleYemekTarifi(yemekAdi, sehir, kategori, tarif);
+        }
+        private void EkleYemekTarifi(string yemekAdi, string sehir, string kategori, string tarif)
+        {
+            string query = "INSERT INTO yemektarifleri (YemekAdi, Sehir, Kategori, Tarif) VALUES (@yemekAdi, @sehir, @kategori, @tarif)";
+
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            using MySqlCommand command = new MySqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@yemekAdi", yemekAdi);
+            command.Parameters.AddWithValue("@sehir", sehir);
+            command.Parameters.AddWithValue("@kategori", kategori);
+            command.Parameters.AddWithValue("@tarif", tarif);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Yemek tarifi başarıyla kaydedildi.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Yemek tarifi eklenirken bir hata oluştu:");
+            }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
+
+
 
 
 

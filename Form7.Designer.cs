@@ -49,10 +49,10 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(255, 128, 0);
-            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(53, 1);
+            label1.Font = new Font("Jokerman", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(53, -1);
             label1.Name = "label1";
-            label1.Size = new Size(150, 25);
+            label1.Size = new Size(227, 35);
             label1.TabIndex = 1;
             label1.Text = "Favori Tariflerim";
             // 
@@ -92,6 +92,7 @@
             Name = "Form7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form7";
+            Load += Form7_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

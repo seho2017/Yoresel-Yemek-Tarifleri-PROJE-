@@ -37,7 +37,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
         private void button1_Click(object sender, EventArgs e)
         {//Giriş
             MySqlConnection baglan = new MySqlConnection("server='localhost';" + "Database='masa_üstü';" + "Uid='root';" + "Pwd='123456';");
-            string sql = $"select * from masa_üstü where kullanici_adi='{textBox1.Text}' and sifre = '{textBox2.Text}'";
+            string sql = $"select * from masa_üstü where kullanici_adi='{textBox1.Text.Trim()}' and sifre = '{textBox2.Text.Trim()}'";
             MySqlCommand komut = new MySqlCommand(sql, baglan);
             baglan.Open();
             MySqlDataReader oku = komut.ExecuteReader();
@@ -50,10 +50,15 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
                 Form6 tarif = new Form6();
                 tarif.Show();
                 this.Hide();
+                // Giriş yapıldıktan sonra TextBox'ları temizle
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {
                 MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı");
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
 
