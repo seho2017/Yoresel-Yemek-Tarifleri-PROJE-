@@ -34,7 +34,9 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form8 tumyemekler = new Form8();
+            tumyemekler.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

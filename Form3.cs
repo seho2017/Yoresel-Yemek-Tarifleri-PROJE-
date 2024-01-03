@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 {
@@ -15,12 +16,14 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
     {
         private MySqlConnection connection;
         private string connectionString = "server=localhost;database=yemektarifleri;uid=root;pwd=123456;";
-
+        private MySqlConnection favoriConnection;
+        private string favoriConnectionString = "server=localhost;database=favori;uid=root;pwd=123456;";
 
         public Form3()
         {
             InitializeComponent();
             connection = new MySqlConnection(connectionString);
+            favoriConnection = new MySqlConnection(favoriConnectionString); // Bağlantı nesnesi düzeltildi
             FillCitiesComboBox();
 
         }
@@ -40,7 +43,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("HATA: " + ex.Message);
             }
             finally
             {
@@ -112,7 +115,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
                 }
                 else
                 {
-                    richTextBoxTarif.Text = "Yemek tarifi bulunamadı.";
+                    richTextBoxTarif.Text = "Bu  Yemeğin tarifi bulunamadı.";
                 }
             }
             catch (Exception)
@@ -246,7 +249,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
             if (string.IsNullOrEmpty(sehir) || string.IsNullOrEmpty(kategori) || string.IsNullOrEmpty(yemekAdi))
             {
-                MessageBox.Show("Lütfen tüm alanları doldurun.");
+                MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -260,6 +263,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
         private void button4_Click(object sender, EventArgs e)
         {
             richTextBoxTarif.Clear();
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -269,44 +273,55 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string sehir = comboBoxSehir.SelectedItem?.ToString();
-            string kategori = comboBoxKategoriler.SelectedItem?.ToString();
-            string yemekAdi = comboBoxYemekler.SelectedItem?.ToString();
-            string tarif = richTextBoxTarif.Text;
-            if (!string.IsNullOrEmpty(sehir) && !string.IsNullOrEmpty(kategori) && !string.IsNullOrEmpty(yemekAdi))
+            try
             {
-                try
+                string yemekAdi = comboBoxYemekler.Text;
+                string tarif = richTextBoxTarif.Text;
+
+                if (string.IsNullOrWhiteSpace(yemekAdi) || string.IsNullOrWhiteSpace(tarif))
                 {
-                    connection.Open();
-                    string insertQuery = $"INSERT INTO Favoriler ( Sehir, Kategori, YemekAdi, Tarif) " +
-                                        $"VALUES ( '{sehir}', '{kategori}', '{yemekAdi}', '{tarif}')";
+                    MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Alanlar boşsa işlemi sonlandır
+                }
 
-                    MySqlCommand cmd = new MySqlCommand(insertQuery, connection);
-                    int affectedRows = cmd.ExecuteNonQuery();
+                using (MySqlCommand cmdCheck = new MySqlCommand("SELECT COUNT(*) FROM favori WHERE YemekAdi = @YemekAdi", favoriConnection))
+                {
+                    cmdCheck.Parameters.AddWithValue("@YemekAdi", yemekAdi);
+                    favoriConnection.Open();
+                    int existingCount = Convert.ToInt32(cmdCheck.ExecuteScalar());
+                    favoriConnection.Close();
 
-                    if (affectedRows > 0)
+                    if (existingCount > 0)
                     {
-                        MessageBox.Show("Yemek favorilere eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Bu yemek zaten favorilerinizde bulunmaktadır.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Favori eklenirken bir hata oluştu.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        using (MySqlCommand cmdInsert = new MySqlCommand("INSERT INTO favori (YemekAdi, Tarif) VALUES (@YemekAdi, @Tarif)", favoriConnection))
+                        {
+                            cmdInsert.Parameters.AddWithValue("@YemekAdi", yemekAdi);
+                            cmdInsert.Parameters.AddWithValue("@Tarif", tarif);
+
+                            favoriConnection.Open();
+                            cmdInsert.ExecuteNonQuery();
+                            favoriConnection.Close();
+
+                            MessageBox.Show("İstediğiniz Yemek Favorilere eklendi.", "Favori Ekleme", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("bir hata oluştu" + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hata: " + ex.Message);
             }
         }
+
+        private void richTextBoxTarif_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

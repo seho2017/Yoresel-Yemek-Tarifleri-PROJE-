@@ -158,7 +158,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             // Tüm alanların doldurulup doldurulmadığını kontrol et
             if (string.IsNullOrEmpty(yemekAdi) || string.IsNullOrEmpty(sehir) || string.IsNullOrEmpty(kategori) || string.IsNullOrEmpty(tarif))
             {
-                MessageBox.Show("Lütfen tüm alanları doldurun.");
+                MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -181,7 +181,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             {
                 connection.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Yemek tarifi başarıyla kaydedildi.");
+                MessageBox.Show("Yemek tarifi başarıyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {

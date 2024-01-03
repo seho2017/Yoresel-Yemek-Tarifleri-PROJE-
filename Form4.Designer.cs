@@ -50,7 +50,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(417, 92);
+            label1.Location = new Point(430, 132);
             label1.Name = "label1";
             label1.Size = new Size(307, 21);
             label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(64, 64, 64);
-            label2.Location = new Point(417, 314);
+            label2.Location = new Point(430, 354);
             label2.Name = "label2";
             label2.Size = new Size(103, 23);
             label2.TabIndex = 1;
@@ -73,7 +73,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(460, 375);
+            label3.Location = new Point(473, 415);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(427, 432);
+            label4.Location = new Point(440, 472);
             label4.Name = "label4";
             label4.Size = new Size(94, 21);
             label4.TabIndex = 3;
@@ -93,8 +93,9 @@
             // textBox1
             // 
             textBox1.BackColor = Color.White;
+            textBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(527, 312);
+            textBox1.Location = new Point(540, 352);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(172, 34);
@@ -104,8 +105,9 @@
             // textBox2
             // 
             textBox2.BackColor = Color.White;
+            textBox2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(527, 375);
+            textBox2.Location = new Point(540, 415);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(172, 32);
@@ -114,8 +116,9 @@
             // textBox3
             // 
             textBox3.BackColor = Color.White;
+            textBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(527, 434);
+            textBox3.Location = new Point(540, 474);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(172, 30);
@@ -129,7 +132,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.FromArgb(64, 64, 64);
-            button1.Location = new Point(527, 495);
+            button1.Location = new Point(540, 535);
             button1.Name = "button1";
             button1.Size = new Size(172, 47);
             button1.TabIndex = 7;
@@ -146,7 +149,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 64, 0);
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(1127, 2);
+            button2.Location = new Point(1159, 2);
             button2.Name = "button2";
             button2.Size = new Size(46, 37);
             button2.TabIndex = 8;
@@ -171,9 +174,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Silver;
-            pictureBox1.Location = new Point(-1, 2);
+            pictureBox1.Location = new Point(-1, -4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1174, 37);
+            pictureBox1.Size = new Size(1206, 43);
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
@@ -181,7 +184,7 @@
             // 
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(472, 137);
+            pictureBox2.Location = new Point(485, 177);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(227, 151);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -194,7 +197,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1173, 581);
+            ClientSize = new Size(1201, 660);
             Controls.Add(pictureBox2);
             Controls.Add(button3);
             Controls.Add(button2);

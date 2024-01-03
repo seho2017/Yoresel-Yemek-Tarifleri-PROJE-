@@ -70,7 +70,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
 
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
             {
-                MessageBox.Show("Alanlar boş geçilemez", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alanlar boş geçilemez", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (textBox2.Text != textBox3.Text)
             {
@@ -87,7 +87,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
                 baglan.Open();
                 komut.ExecuteNonQuery();
                 baglan.Close(); // Bağlantıyı kapatma
-                MessageBox.Show("Kaydınız Başarıyla Oluşmuştur");
+                MessageBox.Show("Kaydınız Başarıyla Oluşmuştur", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form2 Tarif = new Form2();
                 Tarif.Show();
                 this.Hide();

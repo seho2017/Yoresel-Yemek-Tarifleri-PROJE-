@@ -72,7 +72,7 @@
             button2.Location = new Point(1142, -2);
             button2.Name = "button2";
             button2.Size = new Size(53, 50);
-            button2.TabIndex = 2;
+            button2.TabIndex = 1;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -84,7 +84,7 @@
             label1.Location = new Point(1, 146);
             label1.Name = "label1";
             label1.Size = new Size(96, 30);
-            label1.TabIndex = 3;
+            label1.TabIndex = 0;
             label1.Text = "Şehir Adı";
             // 
             // label2
@@ -95,7 +95,7 @@
             label2.Location = new Point(0, 52);
             label2.Name = "label2";
             label2.Size = new Size(110, 30);
-            label2.TabIndex = 4;
+            label2.TabIndex = 0;
             label2.Text = "Yemek Adı";
             // 
             // label6
@@ -107,26 +107,28 @@
             label6.Location = new Point(3, 310);
             label6.Name = "label6";
             label6.Size = new Size(94, 30);
-            label6.TabIndex = 8;
+            label6.TabIndex = 0;
             label6.Text = "Tarifi Yaz";
             // 
             // textBox1
             // 
+            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(0, 85);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(1195, 50);
-            textBox1.TabIndex = 9;
+            textBox1.TabIndex = 2;
             textBox1.MouseEnter += textBox1_MouseEnter;
             textBox1.MouseLeave += textBox1_MouseLeave;
             // 
             // textBox6
             // 
+            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.Location = new Point(0, 357);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(1195, 182);
-            textBox6.TabIndex = 14;
+            textBox6.Size = new Size(1195, 250);
+            textBox6.TabIndex = 5;
             textBox6.MouseEnter += textBox6_MouseEnter;
             textBox6.MouseLeave += textBox6_MouseLeave;
             // 
@@ -134,10 +136,10 @@
             // 
             button3.BackColor = Color.FromArgb(255, 128, 0);
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 255);
-            button3.Location = new Point(1, 535);
+            button3.Location = new Point(1, 604);
             button3.Name = "button3";
-            button3.Size = new Size(1195, 45);
-            button3.TabIndex = 15;
+            button3.Size = new Size(1195, 54);
+            button3.TabIndex = 6;
             button3.Text = "TASLAĞI KAYDET";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -150,33 +152,35 @@
             label3.Location = new Point(1, 236);
             label3.Name = "label3";
             label3.Size = new Size(143, 30);
-            label3.TabIndex = 16;
+            label3.TabIndex = 0;
             label3.Text = "kategori Seçin";
             // 
             // comboBox1
             // 
+            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "ANA YEMEKLER", "ÇORBALAR", "TATLILAR", "KAHVALTILIKLAR" });
             comboBox1.Location = new Point(0, 269);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(1194, 23);
-            comboBox1.TabIndex = 17;
+            comboBox1.Size = new Size(1194, 33);
+            comboBox1.TabIndex = 4;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox2
             // 
+            textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(0, 184);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(1194, 49);
-            textBox2.TabIndex = 18;
+            textBox2.TabIndex = 3;
             // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1192, 583);
+            ClientSize = new Size(1192, 657);
             Controls.Add(textBox2);
             Controls.Add(comboBox1);
             Controls.Add(label3);

@@ -30,47 +30,49 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             pictureBox1 = new PictureBox();
-            KATEGORİLER = new ListBox();
+            label1 = new Label();
             button1 = new Button();
             button2 = new Button();
-            Fotoğraflar = new ListBox();
-            linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
-            linkLabel3 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
-            label1 = new Label();
+            comboBox1 = new ComboBox();
+            richTextBox1 = new RichTextBox();
+            pictureBox2 = new PictureBox();
             label2 = new Label();
+            YEMEKLER = new ListBox();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Red;
-            pictureBox1.Location = new Point(-2, -4);
+            pictureBox1.BackColor = Color.FromArgb(255, 128, 0);
+            pictureBox1.Location = new Point(-1, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1197, 50);
-            pictureBox1.TabIndex = 4;
+            pictureBox1.Size = new Size(1234, 62);
+            pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // KATEGORİLER
+            // label1
             // 
-            KATEGORİLER.BackColor = Color.Red;
-            KATEGORİLER.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            KATEGORİLER.FormattingEnabled = true;
-            KATEGORİLER.ItemHeight = 21;
-            KATEGORİLER.Location = new Point(317, 187);
-            KATEGORİLER.Name = "KATEGORİLER";
-            KATEGORİLER.Size = new Size(208, 235);
-            KATEGORİLER.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(255, 128, 0);
+            label1.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(380, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(418, 30);
+            label1.TabIndex = 0;
+            label1.Text = "TARİF KATEGORİLERİ VE TÜM TARİFLER";
             // 
             // button1
             // 
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(-2, -4);
+            button1.Location = new Point(-1, 0);
             button1.Name = "button1";
-            button1.Size = new Size(46, 50);
-            button1.TabIndex = 10;
+            button1.Size = new Size(63, 60);
+            button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -78,133 +80,139 @@
             // 
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(1143, -2);
+            button2.Location = new Point(1170, -2);
             button2.Name = "button2";
-            button2.Size = new Size(52, 48);
-            button2.TabIndex = 11;
+            button2.Size = new Size(63, 60);
+            button2.TabIndex = 2;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // Fotoğraflar
+            // comboBox1
             // 
-            Fotoğraflar.BackColor = Color.Red;
-            Fotoğraflar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Fotoğraflar.FormattingEnabled = true;
-            Fotoğraflar.ItemHeight = 25;
-            Fotoğraflar.Location = new Point(572, 187);
-            Fotoğraflar.Name = "Fotoğraflar";
-            Fotoğraflar.Size = new Size(227, 229);
-            Fotoğraflar.TabIndex = 12;
+            comboBox1.BackColor = Color.FromArgb(224, 224, 224);
+            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.ForeColor = Color.FromArgb(255, 128, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(0, 93);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(554, 33);
+            comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // linkLabel1
+            // richTextBox1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Red;
-            linkLabel1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(600, 216);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(180, 21);
-            linkLabel1.TabIndex = 13;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Ana Yemek Fotoğrafları\r\n";
+            richTextBox1.BackColor = Color.FromArgb(224, 224, 224);
+            richTextBox1.BorderStyle = BorderStyle.None;
+            richTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.ForeColor = Color.FromArgb(255, 128, 0);
+            richTextBox1.Location = new Point(291, 162);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(469, 514);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
-            // linkLabel2
+            // pictureBox2
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.BackColor = Color.Red;
-            linkLabel2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(603, 258);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(144, 21);
-            linkLabel2.TabIndex = 14;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Çorba Fotoğrafları";
-            // 
-            // linkLabel3
-            // 
-            linkLabel3.AutoSize = true;
-            linkLabel3.BackColor = Color.Red;
-            linkLabel3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel3.LinkColor = Color.Black;
-            linkLabel3.Location = new Point(603, 295);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(129, 21);
-            linkLabel3.TabIndex = 15;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Tatlı Fotoğrafları";
-            // 
-            // linkLabel4
-            // 
-            linkLabel4.AutoSize = true;
-            linkLabel4.BackColor = Color.Red;
-            linkLabel4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel4.LinkColor = Color.Black;
-            linkLabel4.Location = new Point(603, 340);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(147, 21);
-            linkLabel4.TabIndex = 16;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "İçecek Fotoğrafları";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(317, 163);
-            label1.Name = "label1";
-            label1.Size = new Size(113, 21);
-            label1.TabIndex = 17;
-            label1.Text = "KATEGORİLER";
+            pictureBox2.BackColor = Color.FromArgb(224, 224, 224);
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(781, 162);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(435, 503);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(572, 163);
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(255, 128, 0);
+            label2.Location = new Point(0, 63);
             label2.Name = "label2";
-            label2.Size = new Size(118, 21);
-            label2.TabIndex = 18;
-            label2.Text = "FOTOĞRAFLAR";
+            label2.Size = new Size(158, 30);
+            label2.TabIndex = 0;
+            label2.Text = "KATEGORİ SEÇ";
+            // 
+            // YEMEKLER
+            // 
+            YEMEKLER.BackColor = Color.Gainsboro;
+            YEMEKLER.BorderStyle = BorderStyle.None;
+            YEMEKLER.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            YEMEKLER.ForeColor = Color.FromArgb(255, 128, 0);
+            YEMEKLER.FormattingEnabled = true;
+            YEMEKLER.ItemHeight = 32;
+            YEMEKLER.Location = new Point(-1, 132);
+            YEMEKLER.Name = "YEMEKLER";
+            YEMEKLER.Size = new Size(268, 544);
+            YEMEKLER.TabIndex = 0;
+            YEMEKLER.SelectedIndexChanged += YEMEKLER_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(255, 128, 0);
+            label3.Location = new Point(291, 129);
+            label3.Name = "label3";
+            label3.Size = new Size(71, 30);
+            label3.TabIndex = 0;
+            label3.Text = "TARİF";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(255, 128, 0);
+            label4.Location = new Point(781, 132);
+            label4.Name = "label4";
+            label4.Size = new Size(144, 30);
+            label4.TabIndex = 0;
+            label4.Text = "GÖRÜNTÜSÜ";
             // 
             // Form8
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(1194, 586);
+            BackColor = Color.FromArgb(224, 224, 224);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1228, 667);
+            Controls.Add(label4);
+            Controls.Add(pictureBox2);
+            Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(linkLabel4);
-            Controls.Add(linkLabel3);
-            Controls.Add(linkLabel2);
-            Controls.Add(linkLabel1);
-            Controls.Add(Fotoğraflar);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Controls.Add(KATEGORİLER);
+            Controls.Add(richTextBox1);
+            Controls.Add(YEMEKLER);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form8";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form8";
+            Load += Form8_Load;
+            MouseDown += Form8_MouseDown;
+            MouseMove += Form8_MouseMove;
+            MouseUp += Form8_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
         private PictureBox pictureBox1;
-        private ListBox KATEGORİLER;
+        private Label label1;
         private Button button1;
         private Button button2;
-        private ListBox Fotoğraflar;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel2;
-        private LinkLabel linkLabel3;
-        private LinkLabel linkLabel4;
-        private Label label1;
+        private ComboBox comboBox1;
+        private RichTextBox richTextBox1;
+        private PictureBox pictureBox2;
         private Label label2;
+        private ListBox YEMEKLER;
+        private Label label3;
+        private Label label4;
     }
 }

@@ -43,7 +43,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             MySqlDataReader oku = komut.ExecuteReader();
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                MessageBox.Show("Alanlar Boş Geçilemez", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alanlar Boş Geçilemez", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (oku.Read())
             {
@@ -56,7 +56,7 @@ namespace MASA_ÜSTÜ_YÖRESEL_YEMEKLER
             }
             else
             {
-                MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı");
+                MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
